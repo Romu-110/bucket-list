@@ -14,8 +14,7 @@ class MainController extends AbstractController
      */
 public function home()
 {
-    echo "coucou";
-    die(); // sert à ce que symfony mette pas d'erreur alors qu'on a pas renvoyé de response
+   return $this->render('main/home.html.twig');
 }
     /**
      * @Route("/test", name="main_test")
@@ -23,7 +22,6 @@ public function home()
 
     public function test()
     {
-        echo "testounet";
-        die(); // sert à ce que symfony mette pas d'erreur alors qu'on a pas renvoyé de response
+        return $this->render('main/test.html.twig');
     }
 }
